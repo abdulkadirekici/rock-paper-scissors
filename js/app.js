@@ -1,6 +1,6 @@
-define(['global', 'jquery', 'underscore', 'backbone',
+define(['jquery', 'underscore', 'backbone',
   'router'
-], function(Global, $, _, Backbone,
+], function($, _, Backbone,
   Router
 ) {
   // Adding a ._super() method to Backbone objects:

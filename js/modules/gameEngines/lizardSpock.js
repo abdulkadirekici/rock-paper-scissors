@@ -15,6 +15,7 @@ define(['jquery', 'underscore', 'backbone',
         name: 'Lizard',
         beats: ['Spock', 'Paper']
       });
+
       var spock = new Weapon.Model({
         name: 'Spock',
         beats: ['Scissor', 'Rock']
