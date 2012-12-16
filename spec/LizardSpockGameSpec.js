@@ -13,11 +13,11 @@ define(['jquery', 'underscore', 'backbone',
     });
 
     it ('Should contain all expected traditional weapons plus new weapons', function() {
-      expect(lizardSpockGame.getWeaponByName('Rock')).toBeTruthy();
-      expect(lizardSpockGame.getWeaponByName('Paper')).toBeTruthy();
-      expect(lizardSpockGame.getWeaponByName('Scissor')).toBeTruthy();
-      expect(lizardSpockGame.getWeaponByName('Spock')).toBeTruthy();
-      expect(lizardSpockGame.getWeaponByName('Lizard')).toBeTruthy();
+      expect(lizardSpockGame.weaponByName('Rock')).toBeTruthy();
+      expect(lizardSpockGame.weaponByName('Paper')).toBeTruthy();
+      expect(lizardSpockGame.weaponByName('Scissor')).toBeTruthy();
+      expect(lizardSpockGame.weaponByName('Spock')).toBeTruthy();
+      expect(lizardSpockGame.weaponByName('Lizard')).toBeTruthy();
     });
 
     describe('Rules', function() {

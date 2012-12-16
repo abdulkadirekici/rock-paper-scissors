@@ -15,7 +15,7 @@ define(['jquery', 'underscore', 'backbone'
     },
 
     addWeapon: function(weapon) {
-      var currentWeapons = this.get('weapons');
+      var currentWeapons = this.weapons();
       currentWeapons.push(weapon);
 
       this.set('weapons', currentWeapons);
@@ -48,15 +48,14 @@ define(['jquery', 'underscore', 'backbone'
       }
     },
 
-    getWeaponByName: function(key) {
+    weaponByName: function(name) {
       return _.find(this.weapons(), function(weapon) {
-        return weapon.name() === key;
+        return weapon.name() === name;
       });
     }
   });
 
   Module.View = Backbone.View.extend({
-
     addWeapon: function(weapon) {
       this.model.addWeapon(weapon);
     },
@@ -67,6 +66,10 @@ define(['jquery', 'underscore', 'backbone'
 
     chooseWeapon2: function(weapon) {
       this.model.chooseWeapon2(weapon);
+    },
+
+    weaponByName: function(name) {
+      return this.model.weaponByName(name);
     }
   });
 

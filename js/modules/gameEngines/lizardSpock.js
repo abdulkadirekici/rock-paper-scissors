@@ -25,15 +25,18 @@ define(['jquery', 'underscore', 'backbone',
           .addWeapon(spock);
 
       // Updating rules:
-      this.getWeaponByName('Rock').beats().push('Lizard');
-      this.getWeaponByName('Paper').beats().push('Spock');
-      this.getWeaponByName('Scissor').beats().push('Lizard');
+      this.weaponByName('Rock').beats().push('Lizard');
+      this.weaponByName('Paper').beats().push('Spock');
+      this.weaponByName('Scissor').beats().push('Lizard');
 
       return this;
     }
   });
 
   Module.View = Traditional.View.extend({
+    initialize: function() {
+      this.model = Module.Model();
+    }
   });
 
   return Module;

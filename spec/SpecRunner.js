@@ -51,7 +51,8 @@ require(['underscore', 'jquery', 'jasmine-html', 'app'], function(_, $, jasmine,
     '../spec/GameEngineSpec',
     '../spec/TraditionalGameSpec',
     '../spec/LizardSpockGameSpec',
-    '../spec/PlayerSpec'
+    '../spec/PlayerSpec',
+    '../spec/GameControllerSpec'
   ];
 
 

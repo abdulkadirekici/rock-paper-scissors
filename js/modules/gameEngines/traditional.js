@@ -23,6 +23,11 @@ define(['jquery', 'underscore', 'backbone',
   });
 
   Module.View = GameEngine.View.extend({
+    initialize: function() {
+      this.model = new Module.Model();
+
+      return this;
+    }
   });
 
   return Module;

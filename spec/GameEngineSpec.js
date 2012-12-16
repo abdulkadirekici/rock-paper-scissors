@@ -51,7 +51,7 @@ define(['jquery', 'underscore', 'backbone',
       ge.addWeapon(rock);
       ge.addWeapon(paper);
 
-      var weapon = ge.getWeaponByName(key);
+      var weapon = ge.weaponByName(key);
       expect(weapon.name()).toEqual(key);
     });
   });

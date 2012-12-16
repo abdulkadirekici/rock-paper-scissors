@@ -13,9 +13,9 @@ define(['jquery', 'underscore', 'backbone',
     });
 
     it ('Should contain all expected traditional weapons', function() {
-      expect(traditionalGame.getWeaponByName('Rock')).toBeTruthy();
-      expect(traditionalGame.getWeaponByName('Paper')).toBeTruthy();
-      expect(traditionalGame.getWeaponByName('Scissor')).toBeTruthy();
+      expect(traditionalGame.weaponByName('Rock')).toBeTruthy();
+      expect(traditionalGame.weaponByName('Paper')).toBeTruthy();
+      expect(traditionalGame.weaponByName('Scissor')).toBeTruthy();
     });
 
     describe('Rules', function() {
