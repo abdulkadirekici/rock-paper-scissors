@@ -13,7 +13,7 @@ define(['jquery', 'underscore', 'backbone',
 
     it ('A CPU should have a cpu type', function() {
       var cpu = new CPU.Model();
-      expect(cpu.type().toEqual('cpu'));
+      expect(cpu.type()).toEqual('cpu');
     });
   });
 });

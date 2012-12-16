@@ -7,7 +7,7 @@ define(['jquery', 'underscore', 'backbone',
 
   Module.Model = Player.Model.extend({
     defaults: {
-      type: 'Human'
+      type: 'human'
     }
   });
 
