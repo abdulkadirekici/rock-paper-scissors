@@ -49,7 +49,8 @@ require(['underscore', 'jquery', 'jasmine-html', 'app'], function(_, $, jasmine,
     '../spec/SpecHelper',
     '../spec/WeaponSpec',
     '../spec/GameEngineSpec',
-    '../spec/TraditionalGameSpec'
+    '../spec/TraditionalGameSpec',
+    '../spec/LizardSpockGameSpec'
   ];
 
 
