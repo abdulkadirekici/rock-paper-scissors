@@ -41,8 +41,8 @@ require(['underscore', 'jquery', 'jasmine-html'], function(_, $, jasmine){
 
   var specs = [];
 
-  specs.push('../spec/weaponSpec');
-  //specs.push('../spec/PlayerSpec');
+  specs.push('../spec/SpecHelper');
+  specs.push('../spec/WeaponSpec');
 
   $(function() {
     require(specs, function() {

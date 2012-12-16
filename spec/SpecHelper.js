@@ -1,8 +1,8 @@
 beforeEach(function() {
   this.addMatchers({
-    toBePlaying: function(expectedSong) {
-      var player = this.actual;
-      return player.currentlyPlayingSong === expectedSong && player.isPlaying;
+    toBeat: function(expectedWeapon) {
+      var weapon = this.actual;
+      return weapon.get('beats').indexOf(expectedWeapon.get('name'))  !== -1;
     }
   });
 });

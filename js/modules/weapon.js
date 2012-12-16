@@ -5,7 +5,9 @@ define(['jquery', 'underscore', 'backbone'
 
   Module.Model = Backbone.Model.extend({
     defaults: {
-      name: 'Generic weapon'
+      name: 'Generic weapon',
+      beats: [],
+      isBeatedBy: []
     }
   });
 
