@@ -50,7 +50,8 @@ require(['underscore', 'jquery', 'jasmine-html', 'app'], function(_, $, jasmine,
     '../spec/WeaponSpec',
     '../spec/GameEngineSpec',
     '../spec/TraditionalGameSpec',
-    '../spec/LizardSpockGameSpec'
+    '../spec/LizardSpockGameSpec',
+    '../spec/PlayerSpec'
   ];
 
 
