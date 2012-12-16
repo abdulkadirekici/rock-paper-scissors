@@ -39,10 +39,12 @@ require(['underscore', 'jquery', 'jasmine-html'], function(_, $, jasmine){
     return htmlReporter.specFilter(spec);
   };
 
-  var specs = [];
+  var specs = [
+    '../spec/SpecHelper',
+    '../spec/WeaponSpec',
+    '../spec/GameEngineSpec'
+  ];
 
-  specs.push('../spec/SpecHelper');
-  specs.push('../spec/WeaponSpec');
 
   $(function() {
     require(specs, function() {

@@ -21,7 +21,7 @@ define(['jquery', 'underscore', 'backbone',
         beats: ['Scissor']
       });
 
-      expect(paper).toBeat(rock);
+      expect(paper.beats(rock)).toBe(true);
     });
   });
 });
