@@ -23,6 +23,10 @@ define(['jquery', 'underscore', 'backbone'
       return this;
     },
 
+    weapons: function() {
+      return this.get('weapons');
+    },
+
     chooseWeapon1: function(weapon) {
       this.set({ chosenWeapon1: weapon });
     },
@@ -40,13 +44,13 @@ define(['jquery', 'underscore', 'backbone'
       } else if (chosenWeapon2.beats(chosenWeapon1)) {
         return chosenWeapon2;
       } else {
-        throw 'Faulty rules: impossible to determine who beats who between: ' + chosenWeapon1.get('name')  +' and '+ chosenWeapon2.get('name');
+        throw 'Faulty rules: unable to determine who beats who between: ' + chosenWeapon1.name()  +' and '+ chosenWeapon2.name();
       }
     },
 
     getWeaponByName: function(key) {
-      return _.find(this.get('weapons'), function(weapon) {
-        return weapon.get('name') === key;
+      return _.find(this.weapons(), function(weapon) {
+        return weapon.name() === key;
       });
     }
   });

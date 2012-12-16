@@ -16,7 +16,7 @@ define(['jquery', 'underscore', 'backbone',
 
     it ('Should have a default name', function() {
       var weapon = new Weapon.Model();
-      var name = weapon.get('name');
+      var name = weapon.name();
       expect(name).toEqual(Weapon.Model.prototype.defaults.name);
     });
 

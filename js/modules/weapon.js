@@ -5,13 +5,20 @@ define(['jquery', 'underscore', 'backbone'
 
   Module.Model = Backbone.Model.extend({
     defaults: {
-      name: 'Generic weapon',
-      beats: [],
-      isBeatedBy: []
+      name: '',
+      beats: []
     },
 
     beats: function(otherWeapon) {
-      return this.get('beats').indexOf(otherWeapon.get('name')) !== -1;
+      if (otherWeapon) {
+        return this.get('beats').indexOf(otherWeapon.name()) !== -1;
+      } else {
+        return this.get('beats');
+      }
+    },
+
+    name: function() {
+      return this.get('name');
     }
   });
 

@@ -25,9 +25,9 @@ define(['jquery', 'underscore', 'backbone',
           .addWeapon(spock);
 
       // Updating rules:
-      this.getWeaponByName('Rock').get('beats').push('Lizard');
-      this.getWeaponByName('Paper').get('beats').push('Spock');
-      this.getWeaponByName('Scissor').get('beats').push('Lizard');
+      this.getWeaponByName('Rock').beats().push('Lizard');
+      this.getWeaponByName('Paper').beats().push('Spock');
+      this.getWeaponByName('Scissor').beats().push('Lizard');
 
       return this;
     }

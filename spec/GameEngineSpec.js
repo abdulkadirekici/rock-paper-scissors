@@ -52,7 +52,7 @@ define(['jquery', 'underscore', 'backbone',
       ge.addWeapon(paper);
 
       var weapon = ge.getWeaponByName(key);
-      expect(weapon.get('name')).toEqual(key);
+      expect(weapon.name()).toEqual(key);
     });
   });
 });
