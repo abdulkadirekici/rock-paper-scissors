@@ -1,12 +1,12 @@
 require.config({
   paths: {
-    global:     'global',
-    jquery:     'libs/jquery/jquery',
+    global: 'global',
+    jquery: 'libs/jquery/jquery',
     underscore: 'libs/underscore/underscore',
-    backbone:   'libs/backbone/backbone',
-    text:       'libs/require/text',
-    json2:      'libs/json/json2',
-    templates:  '../templates'
+    backbone:  'libs/backbone/backbone',
+    text: 'libs/require/text',
+    json2: 'libs/json/json2',
+    templates: '../templates'
   },
   shim: {
     'backbone': {

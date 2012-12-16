@@ -5,7 +5,7 @@ define(['jquery', 'underscore', 'backbone',
   GameEngine,
   Weapon
 ) {
-  describe ('Game Engine', function() {
+  describe ('Game Engine - Core', function() {
     var rock = new Weapon.Model({
       name: 'Rock',
       beats: ['Scissor']
@@ -21,9 +21,13 @@ define(['jquery', 'underscore', 'backbone',
       beats: ['Paper']
     });
 
-    it ('Should be able to add weapons', function() {
-      var ge = new GameEngine.Model();
+    var ge = null;
 
+    beforeEach(function() {
+     ge = new GameEngine.Model();
+    });
+
+    it ('Should be able to add weapons', function() {
       var weaponsBefore = ge.get('weapons').length;
       ge.addWeapon(rock);
       ge.addWeapon(paper);
@@ -34,13 +38,21 @@ define(['jquery', 'underscore', 'backbone',
     });
 
     it ('Should judge right', function() {
-      var ge = new GameEngine.Model();
       ge.chooseWeapon1(paper);
       ge.chooseWeapon2(rock);
 
       var winner = ge.judge();
 
       expect(winner).toEqual(paper);
+    });
+
+    it ('Should be able to locate a weapon by its name', function() {
+      var key = 'Rock';
+      ge.addWeapon(rock);
+      ge.addWeapon(paper);
+
+      var weapon = ge.getWeaponByName(key);
+      expect(weapon.get('name')).toEqual(key);
     });
   });
 });

@@ -5,6 +5,8 @@ require.config({
     jquery: 'libs/jquery/jquery',
     underscore: 'libs/underscore/underscore',
     backbone: 'libs/backbone/backbone',
+    text: 'libs/require/text',
+    json2: 'libs/json/json2',
     jasmine: 'libs/jasmine/jasmine',
     'jasmine-html': 'libs/jasmine/jasmine-html',
     spec: '../spec/'
@@ -23,11 +25,15 @@ require.config({
     'jasmine-html': {
       deps: ['jasmine'],
       exports: 'jasmine'
-    }
+    },
+    app: [
+      'backbone',
+      'json2'
+    ]
   }
 });
 
-require(['underscore', 'jquery', 'jasmine-html'], function(_, $, jasmine){
+require(['underscore', 'jquery', 'jasmine-html', 'app'], function(_, $, jasmine, app) {
   var jasmineEnv = jasmine.getEnv();
   jasmineEnv.updateInterval = 1000;
 
@@ -42,7 +48,8 @@ require(['underscore', 'jquery', 'jasmine-html'], function(_, $, jasmine){
   var specs = [
     '../spec/SpecHelper',
     '../spec/WeaponSpec',
-    '../spec/GameEngineSpec'
+    '../spec/GameEngineSpec',
+    '../spec/TraditionalGameSpec'
   ];
 
 
