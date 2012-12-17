@@ -1,7 +1,5 @@
-define(['jquery', 'underscore', 'backbone',
-  'modules/player'
-], function($, _, Backbone,
-  Player
+define(['jquery', 'underscore', 'backbone'
+], function($, _, Backbone
 ) {
   var Module = {};
 
@@ -24,6 +22,11 @@ define(['jquery', 'underscore', 'backbone',
   });
 
   Module.View = Backbone.View.extend({
+    render: function() {
+      this.$el.empty().append(this.template(this.model));
+
+      return this;
+    }
   });
 
   return Module;

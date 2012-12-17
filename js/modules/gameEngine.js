@@ -70,6 +70,10 @@ define(['jquery', 'underscore', 'backbone'
 
     weaponByName: function(name) {
       return this.model.weaponByName(name);
+    },
+
+    weapons: function() {
+      return this.model.weapons();
     }
   });
 

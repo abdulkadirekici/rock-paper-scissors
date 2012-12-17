@@ -1,6 +1,8 @@
 define(['jquery', 'underscore', 'backbone',
+  'text!templates/playerCPU.html.erb',
   'modules/player'
 ], function($, _, Backbone,
+  Template,
   Player
 ) {
   var Module = {};
@@ -13,6 +15,7 @@ define(['jquery', 'underscore', 'backbone',
   });
 
   Module.View = Player.View.extend({
+    template: _.template(Template)
   });
 
   return Module;

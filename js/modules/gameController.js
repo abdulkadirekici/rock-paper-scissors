@@ -1,9 +1,13 @@
 define(['jquery', 'underscore', 'backbone',
   'modules/gameEngines/traditional',
-  'modules/gameEngines/lizardSpock'
+  'modules/gameEngines/lizardSpock',
+  'modules/player/cpu',
+  'modules/player/human'
 ], function($, _, Backbone,
   Traditional,
-  LizardSpock
+  LizardSpock,
+  CPU,
+  Human
 ) {
   var Module = {};
 
@@ -42,23 +46,24 @@ define(['jquery', 'underscore', 'backbone',
     },
 
     loadPlayers: function(player) {
-      var player1;
-
+      console.log('p: ',player);
       if (player === 'cpu') {
-        player1 = new CPU.Model();
+        this.player1 = new CPU.View();
       } else {
-        player1 = new Human.Model();
+        this.player1 = new Human.View({
+          weapons: this.gameEngine.weapons()
+        });
       }
-      var player2 = new CPU.Model();
+      this.player2 = new CPU.View();
 
-      this.players(player1, player2);
+      this.player1.setElement($('#player1'));
+      this.player2.setElement($('#player2'));
     },
 
-    players: function(p1, p2) {
-      this.model.set({
-        player1: p1,
-        player2: p2
-      });
+    renderPlayers: function() {
+      console.log('controler');
+      this.player1.render();
+      this.player2.render();
     },
 
     pickRandomWeapon: function() {

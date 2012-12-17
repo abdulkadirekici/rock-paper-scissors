@@ -35,7 +35,7 @@ define(['jquery', 'underscore', 'backbone',
 
   Module.View = Traditional.View.extend({
     initialize: function() {
-      this.model = Module.Model();
+      this.model = new Module.Model();
     }
   });
 

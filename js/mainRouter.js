@@ -10,7 +10,7 @@ define(['jquery', 'underscore', 'backbone',
     },
 
     index: function(mode, player) {
-      this.activeGameView = new GameBoard({
+      this.activeGameView = new GameBoard.View({
         mode: mode,
         player1: player
       });
