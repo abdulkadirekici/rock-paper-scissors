@@ -11,13 +11,6 @@ define(['jquery', 'underscore', 'backbone',
     defaults: {
       type: 'cpu',
       name: 'CPU'
-    },
-
-    weapon: function(weapon) {
-      if (weapon) {
-        this.set('weapon', weapon);
-      }
-      return this.get('weapon');
     }
   });
 
@@ -26,10 +19,6 @@ define(['jquery', 'underscore', 'backbone',
 
     initialize: function() {
       this.model = new Module.Model();
-    },
-
-    weapon: function(weapon) {
-      return this.model.weapon(weapon);
     }
   });
 

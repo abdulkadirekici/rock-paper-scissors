@@ -50,7 +50,6 @@ define(['jquery', 'underscore', 'backbone',
     },
 
     go: function() {
-    console.log('click go');
       this.$result.empty().append(this.gameController.play());
     }
   });

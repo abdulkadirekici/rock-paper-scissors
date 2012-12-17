@@ -39,7 +39,6 @@ define(['jquery', 'underscore', 'backbone',
       _.each(actions, function(value, key, list) {
         list[key][key] = 'is drawn by another';
       });
-      console.log(weapon1, weapon2);
       return actions[weapon1] && actions[weapon1][weapon2];
     }
   });

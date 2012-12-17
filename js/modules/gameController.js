@@ -77,10 +77,11 @@ define(['jquery', 'underscore', 'backbone',
 
       var weapon1;
       if (this.player1.type() == 'human') {
-        weapon1 = this.weaponByName(player1.selectedWeapon());
+        weapon1 = this.weaponByName(this.player1.selectedWeapon());
       } else {
         weapon1 = this.pickRandomWeapon();
       }
+
       this.player1.weapon(weapon1);
 
       return this.judge();

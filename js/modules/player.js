@@ -18,6 +18,13 @@ define(['jquery', 'underscore', 'backbone'
 
     type: function() {
       return this.get('type');
+    },
+
+    weapon: function(weapon) {
+      if (weapon) {
+        this.chooseWeapon(weapon);
+      }
+      return this.chosenWeapon();
     }
   });
 
@@ -30,6 +37,10 @@ define(['jquery', 'underscore', 'backbone'
 
     type: function() {
       return this.model.type();
+    },
+
+    weapon: function(weapon) {
+      return this.model.weapon(weapon);
     }
   });
 
