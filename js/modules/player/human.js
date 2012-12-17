@@ -17,6 +17,10 @@ define(['jquery', 'underscore', 'backbone',
   Module.View = Player.View.extend({
     template: _.template(Template),
 
+    initialize: function() {
+      this.model = new Module.Model();
+    },
+
     cacheElements: function() {
       this.$weapons = this.$el.find('.weapon');
     },
@@ -29,15 +33,19 @@ define(['jquery', 'underscore', 'backbone',
       return this;
     },
 
-    renderWeapons: function(weapons) {
+    renderWeapons: function() {
       var weapons = this.options.weapons;
 
-      var fragment = document.createDocumentFragment();
+      var domFragment = document.createDocumentFragment();
       weapons.forEach(function(weapon) {
         var name = weapon.name();
-        fragment.appendChild(this.make('option', { value: name }, name));
+        domFragment.appendChild(this.make('option', { value: name }, name));
       }, this);
-      this.$weapons.append(fragment);
+      this.$weapons.append(domFragment);
+    },
+
+    selectedWeapon: function() {
+      return this.$weapons.find('option:selected').val();
     }
   });
 

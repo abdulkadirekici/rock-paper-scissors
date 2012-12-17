@@ -26,6 +26,10 @@ define(['jquery', 'underscore', 'backbone'
       this.$el.empty().append(this.template(this.model));
 
       return this;
+    },
+
+    type: function() {
+      return this.model.type();
     }
   });
 

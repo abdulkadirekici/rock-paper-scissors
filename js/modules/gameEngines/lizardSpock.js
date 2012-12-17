@@ -36,6 +36,34 @@ define(['jquery', 'underscore', 'backbone',
   Module.View = Traditional.View.extend({
     initialize: function() {
       this.model = new Module.Model();
+    },
+
+    phrasesDict: function(weapon1, weapon2) {
+      var result = this._super('phrasesDict', [weapon1, weapon2]);
+
+      if (!result) {
+        var actions = {
+          'Rock': { 'Lizard': 'crushes' },
+          'Paper': { 'Spock': 'disproves' },
+          'Scissor': { 'Lizard': 'decapitates' },
+          'Spock': {
+            'Scissor': 'smashes',
+            'Rock': 'vaporizes'
+          },
+          'Lizard': {
+            'Paper': 'eats',
+            'Spock': 'poisons'
+          }
+        };
+
+        _.each(actions, function(value, key, list) {
+          list[key][key] = 'is drawn by another';
+        });
+
+        result = actions[weapon1][weapon2];
+      }
+
+      return result;
     }
   });
 

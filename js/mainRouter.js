@@ -10,6 +10,9 @@ define(['jquery', 'underscore', 'backbone',
     },
 
     index: function(mode, player) {
+      // Preventing zombies across different games, freeing resources up
+      this.closePreviousView();
+
       this.activeGameView = new GameBoard.View({
         mode: mode,
         player1: player
@@ -17,11 +20,6 @@ define(['jquery', 'underscore', 'backbone',
     },
 
     activeView: null,
-
-    changeActiveView: function(newActiveView) {
-      this.closePreviousView();
-      this.activeView = newActiveView;
-    },
 
     closePreviousView: function() {
       if (this.activeView) this.activeView.close();

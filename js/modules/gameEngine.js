@@ -38,11 +38,16 @@ define(['jquery', 'underscore', 'backbone'
     judge: function() {
       var chosenWeapon1 = this.get('chosenWeapon1');
       var chosenWeapon2 = this.get('chosenWeapon2');
+      var weapons = [chosenWeapon1, chosenWeapon2];
+
+      if (chosenWeapon1.name() === chosenWeapon2.name()) {
+        return weapons;
+      }
 
       if (chosenWeapon1.beats(chosenWeapon2)) {
-        return chosenWeapon1;
+        return weapons;
       } else if (chosenWeapon2.beats(chosenWeapon1)) {
-        return chosenWeapon2;
+        return weapons.reverse();
       } else {
         throw 'Faulty rules: unable to determine who beats who between: ' + chosenWeapon1.name()  +' and '+ chosenWeapon2.name();
       }
@@ -74,6 +79,15 @@ define(['jquery', 'underscore', 'backbone'
 
     weapons: function() {
       return this.model.weapons();
+    },
+
+    judge: function() {
+      var result = this.model.judge();
+      var weapon1 = result[0].name();
+      var weapon2 = result[1].name();
+      var action = this.phrasesDict(weapon1, weapon2);
+
+      return [weapon1, action, weapon2].join(' ');
     }
   });
 

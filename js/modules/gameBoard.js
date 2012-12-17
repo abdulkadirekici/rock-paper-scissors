@@ -13,10 +13,10 @@ define(['jquery', 'underscore', 'backbone',
   });
 
   Module.View = Backbone.View.extend({
-    id: 'game-board',
+    el: $('#game-board'),
 
     events: {
-      'click go': 'go'
+      'click #go': 'go'
     },
 
     initialize: function() {
@@ -31,19 +31,27 @@ define(['jquery', 'underscore', 'backbone',
 
     cacheElements: function() {
       this.$gameControls = this.$el.find('#game-controls');
+      this.$result = this.$el.find('#result');
     },
 
     controlsTemplate : _.template(GameControlsTemplate),
 
     render: function() {
-      this.$gameControls.empty().append(this.controlsTemplate());
+      this.$gameControls.empty().append(this.controlsTemplate(this.currentGame()));
 
-      console.log('rende here');
       this.gameController.renderPlayers();
     },
 
-    go: function() {
+    currentGame: function() {
+      return {
+        mode: this.options.mode,
+        player1: this.options.player1
+      };
+    },
 
+    go: function() {
+    console.log('click go');
+      this.$result.empty().append(this.gameController.play());
     }
   });
 
