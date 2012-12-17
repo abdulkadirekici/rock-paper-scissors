@@ -7,7 +7,8 @@ define(['jquery', 'underscore', 'backbone',
 
   Module.Model = Player.Model.extend({
     defaults: {
-      type: 'cpu'
+      type: 'cpu',
+      name: 'CPU'
     }
   });
 

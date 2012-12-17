@@ -1,19 +1,25 @@
 define(['jquery', 'underscore', 'backbone',
-  'modules/gameBoard'
+  'modules/gameController'
 ], function($, _, Backbone,
-  GameBoard
+  GameController
 ) {
   var Router = Backbone.Router.extend({
     routes: {
       '': 'index',
-      '!/:mode/:player-vs-cpu': 'index'
+      '#!/:mode/player-vs-cpu': 'playerVsCpu',
+      '#!/:mode/cpu-vcs-cpu': 'cpuVsCpu'
     },
 
-    index: function(mode, player) {
-      this.activeGameView = new GameBoard({
-        mode: mode,
-        player1: player
-      });
+    index: function() {
+      this.playerVsCpu();
+    },
+
+    playerVsCpu: function() {
+      this.activeGameView = new GameController();
+    },
+
+    cpuVsCpu: function() {
+      this.activeGameView = new GameControler({ mode: ' })
     },
 
     activeView: null,
