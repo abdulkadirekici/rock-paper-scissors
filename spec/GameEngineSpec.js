@@ -41,7 +41,7 @@ define(['jquery', 'underscore', 'backbone',
       ge.chooseWeapon1(paper);
       ge.chooseWeapon2(rock);
 
-      var winner = ge.judge();
+      var winner = ge.judge()[0];
 
       expect(winner).toEqual(paper);
     });

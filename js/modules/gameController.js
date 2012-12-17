@@ -35,7 +35,7 @@ define(['jquery', 'underscore', 'backbone',
     },
 
     loadGameEngine: function() {
-      var mode = this.options.mode;
+      var mode = this.options.mode || 'traditional';
       this.model.set({ mode: mode });
 
       if (mode === 'lizard-spock') {
