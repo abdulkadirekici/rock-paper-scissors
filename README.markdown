@@ -17,6 +17,11 @@ Point the browser to [index.html][index]
 ## Running the test specs
 Point the browser to the [spec runner][specRunner]
 
+## TODO's
+ - Highlight the winner
+ - Make the weapons be displayed under each player box
+ - Clean screen state after each game / offer a "New game" button
+
 ## Technologies used
  - Backbone.js
  - jQuery
