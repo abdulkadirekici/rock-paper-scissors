@@ -22,6 +22,7 @@ Point the browser to the /spec/index.html
  - Make the weapons be displayed under each player box
  - Clean screen state after each game / offer a "New game" button
  - Improve tests coverage
+ - Make use of npm's package.json for the dependencies
 
 ## Technologies used
  - Backbone.js
