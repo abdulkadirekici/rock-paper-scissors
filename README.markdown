@@ -12,10 +12,10 @@ A little code exercise from Luiz Gonzaga dos Santos Filho (lfilho[at]gmail[dot]c
  - Make it extensible for [Rock - Paper - Scissors - Lizard - Spock][2]
 
 ## Running the game
-Point the browser to [index.html][index]
+Point the browser to /index.html
 
 ## Running the test specs
-Point the browser to the [spec runner][specRunner]
+Point the browser to the /spec/index.html
 
 ## Technologies used
  - Backbone.js
@@ -24,11 +24,9 @@ Point the browser to the [spec runner][specRunner]
  - Jasmine
  - Require.js
  - GIT
- - Markdown
+ - Markdown (this file)
  - HTML 5
- - CSS
+ - CSS (bootstrapped by Twitter Bootstrap)
 
  [1]: http://en.wikipedia.org/wiki/Rock-paper-scissors
  [2]: http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock
- [index]: index.html
- [specRunner]: spec/index.html
