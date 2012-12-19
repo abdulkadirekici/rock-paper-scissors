@@ -21,6 +21,7 @@ Point the browser to the /spec/index.html
  - Highlight the winner
  - Make the weapons be displayed under each player box
  - Clean screen state after each game / offer a "New game" button
+ - Improve tests coverage
 
 ## Technologies used
  - Backbone.js
