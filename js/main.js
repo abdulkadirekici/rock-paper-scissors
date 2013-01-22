@@ -1,10 +1,10 @@
 require.config({
   paths: {
-    jquery: 'libs/jquery/jquery',
-    underscore: 'libs/underscore/underscore',
+    jquery: 'libs/jquery/jquery.min',
+    underscore: 'libs/underscore/underscore-min',
     backbone:  'libs/backbone/backbone-min',
-    text: 'libs/require/text',
-    json2: 'libs/json/json2',
+    text: 'libs/requirejs-text/text',
+    json3: 'libs/json3/lib/json3.min',
     templates: '../templates'
   },
   shim: {
@@ -14,7 +14,7 @@ require.config({
     },
     'app': [
       'backbone',
-      'json2'
+      'json3'
     ]
   }
 });

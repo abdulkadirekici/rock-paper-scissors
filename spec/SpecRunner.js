@@ -2,14 +2,15 @@ require.config({
   baseUrl: '../js/',
   urlArgs: 'cb=' + Math.random(),
   paths: {
-    jquery: 'libs/jquery/jquery',
-    underscore: 'libs/underscore/underscore',
-    backbone: 'libs/backbone/backbone',
-    text: 'libs/require/text',
-    json2: 'libs/json/json2',
-    jasmine: 'libs/jasmine/jasmine',
-    'jasmine-html': 'libs/jasmine/jasmine-html',
-    spec: '../spec/'
+    jquery: 'libs/jquery/jquery.min',
+    underscore: 'libs/underscore/underscore-min',
+    backbone: 'libs/backbone/backbone-min',
+    text: 'libs/requirejs-text/text',
+    json3: 'libs/json3/lib/json3.min',
+    jasmine: 'libs/jasmine/lib/jasmine-core/jasmine',
+    'jasmine-html': 'libs/jasmine/lib/jasmine-core/jasmine-html',
+    spec: '../spec/',
+    templates: '../templates'
   },
   shim: {
     underscore: {
@@ -28,7 +29,7 @@ require.config({
     },
     app: [
       'backbone',
-      'json2'
+      'json3'
     ]
   }
 });

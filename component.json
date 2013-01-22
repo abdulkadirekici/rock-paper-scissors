@@ -3,6 +3,11 @@
   "version": "0.1.5",
   "dependencies": {
     "jquery": "1.9.x",
-    "backbone": "git://github.com/amdjs/backbone.git#0.9.9"
+    "backbone": "git://github.com/amdjs/backbone.git#0.9.9",
+    "underscore": "git://github.com/amdjs/underscore.git",
+    "requirejs": "2.1.2",
+    "requirejs-text": "2.0.x",
+    "json3": "~3.2.4",
+    "jasmine": "~1.3.1"
   }
 }
