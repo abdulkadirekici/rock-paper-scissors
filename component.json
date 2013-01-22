@@ -3,6 +3,6 @@
   "version": "0.1.5",
   "dependencies": {
     "jquery": "1.9.x",
-    "backbone": "git://github.com/amdjs/backbone.git#0.9.x"
+    "backbone": "git://github.com/amdjs/backbone.git#0.9.9"
   }
 }
