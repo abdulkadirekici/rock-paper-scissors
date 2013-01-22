@@ -14,7 +14,7 @@ A little code exercise from Luiz Gonzaga dos Santos Filho (lfilho[at]gmail[dot]c
 ## Installing the game
  - Download this repository whichever way you prefer.
  - Install [Bower][3] if you don't have it already
- - Run [code]bower install[/code]
+ - Run `bower install` in the project root
 
 ## Running the game
 Point the browser to /index.html
