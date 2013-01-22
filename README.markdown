@@ -11,6 +11,11 @@ A little code exercise from Luiz Gonzaga dos Santos Filho (lfilho[at]gmail[dot]c
  - Play a different game each time
  - Make it extensible for [Rock - Paper - Scissors - Lizard - Spock][2]
 
+## Installing the game
+ - Download this repository whichever way you prefer.
+ - Install [Bower][3] if you don't have it already
+ - Run [code]bower install[/code]
+
 ## Running the game
 Point the browser to /index.html
 
@@ -37,3 +42,4 @@ Point the browser to the /spec/index.html
 
  [1]: http://en.wikipedia.org/wiki/Rock-paper-scissors
  [2]: http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock
+ [3]: https://github.com/twitter/bower
