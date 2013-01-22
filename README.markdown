@@ -3,7 +3,7 @@
 A little code exercise from Luiz Gonzaga dos Santos Filho (lfilho[at]gmail[dot]com).
 
 ## The game
-  - See it on [wikipedia][1]
+ - See it on [wikipedia][1]
 
 ## Goals
  - Play Player vs Computer
@@ -18,11 +18,10 @@ Point the browser to /index.html
 Point the browser to the /spec/index.html
 
 ## TODO's
- - Highlight the winner
- - Make the weapons be displayed under each player box
- - Clean screen state after each game / offer a "New game" button
- - Improve tests coverage
- - Make use of npm's package.json for the dependencies
+- Highlight the winner
+- Make the weapons be displayed under each player box
+- Clean screen state after each game / offer a "New game" button
+- Improve tests coverage
 
 ## Technologies used
  - Backbone.js
@@ -30,6 +29,7 @@ Point the browser to the /spec/index.html
  - Underscore.js
  - Jasmine
  - Require.js
+ - Bower (components dependecy)
  - GIT
  - Markdown (this file)
  - HTML 5
