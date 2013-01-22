@@ -27,6 +27,7 @@ Point the browser to the /spec/index.html
 - Make the weapons be displayed under each player box
 - Clean screen state after each game / offer a "New game" button
 - Improve tests coverage
+- Review code and see if adding some more comments could improve its readability
 
 ## Technologies used
  - Backbone.js
