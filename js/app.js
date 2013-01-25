@@ -59,7 +59,7 @@ define(['jquery', 'underscore', 'backbone',
     if (attributes) _.each(attributes, function (value, key) {
       el.setAttribute(key, value);
     });
-    if (content !== null) el.innerHTML = content;
+    if (content) $(el).append(content);
 
     return el;
   };
