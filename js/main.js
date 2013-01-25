@@ -1,7 +1,7 @@
 require.config({
   paths: {
     jquery: 'libs/jquery/jquery.min',
-    underscore: 'libs/underscore/underscore-min',
+    lodash: 'libs/lodash/lodash.underscore.min',
     backbone:  'libs/backbone/backbone-min',
     text: 'libs/requirejs-text/text',
     json3: 'libs/json3/lib/json3.min',
@@ -9,13 +9,21 @@ require.config({
   },
   shim: {
     'backbone': {
-      deps: ['underscore', 'jquery'],
+      deps: ['lodash', 'jquery'],
       exports: 'Backbone'
+    },
+    'lodash': {
+      exports: '_'
     },
     'app': [
       'backbone',
       'json3'
     ]
+  },
+  map: {
+    '*': {
+      'underscore': 'lodash'
+    }
   }
 });
 
