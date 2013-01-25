@@ -51,6 +51,19 @@ define(['jquery', 'underscore', 'backbone',
     }
   };
 
+  /*
+   * Adding helper #make method to views:
+   */
+  Backbone.View.prototype.make = function(tagName, attributes, content) {
+    var el = document.createElement(tagName);
+    if (attributes) _.each(attributes, function (value, key) {
+      el.setAttribute(key, value);
+    });
+    if (content !== null) el.innerHTML = content;
+
+    return el;
+  };
+
   // Application namespace
   window.App = window.App || {
     router: new Router()
