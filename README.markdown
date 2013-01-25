@@ -28,6 +28,7 @@ Point the browser to the /spec/index.html
 - Clean screen state after each game / offer a "New game" button
 - Improve tests coverage
 - Review code and see if adding some more comments could improve its readability
+- Use Require.js capabilities of auto AMD'ing modules and stop using amdjs/ repositories for Backbone and Underscore
 
 ## Technologies used
  - Backbone.js
