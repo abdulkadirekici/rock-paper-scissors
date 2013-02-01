@@ -1,6 +1,4 @@
-define(['jquery', 'underscore', 'backbone'
-], function($, _, Backbone
-) {
+define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
   var Module = {};
 
   Module.Model = Backbone.Model.extend({

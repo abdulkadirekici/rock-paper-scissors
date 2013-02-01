@@ -7,10 +7,7 @@ define(['jquery', 'underscore', 'backbone',
 ) {
   var Module = {};
 
-  Module.Model = Backbone.Model.extend({
-    defaults: {
-    }
-  });
+  Module.Model = Backbone.Model.extend();
 
   Module.View = Backbone.View.extend({
     el: $('#game-board'),
@@ -43,10 +40,7 @@ define(['jquery', 'underscore', 'backbone',
     },
 
     currentGame: function() {
-      return {
-        mode: this.options.mode,
-        player1: this.options.player1
-      };
+      return this.gameController.game();
     },
 
     go: function() {

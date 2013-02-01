@@ -57,7 +57,7 @@ define(['jquery', 'underscore', 'backbone',
         };
 
         _.each(actions, function(value, key, list) {
-          list[key][key] = 'is drawn by another';
+          list[key][key] = 'ties with another';
         });
 
         result = actions[weapon1][weapon2];

@@ -36,22 +36,6 @@ define(['jquery', 'underscore', 'backbone',
   });
 
   /*
-   * Adding a close method to all Backbone View's so we can clean them when needed
-   */
-  Backbone.View.prototype.close = function() {
-    // Empty the container element and unbinds events on its children:
-    this.$el.empty();
-    // Unbind the events associated with this view (in the events hash):
-    this.undelegateEvents();
-    // Unbinds the events bound explicitly (like "this.on('bla')"):
-    this.off();
-    // Customized callback that each view can implement to handle specific clean up stuff:
-    if (this.onClose) {
-      this.onClose();
-    }
-  };
-
-  /*
    * Adding helper #make method to views:
    */
   Backbone.View.prototype.make = function(tagName, attributes, content) {

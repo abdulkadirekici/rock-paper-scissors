@@ -28,15 +28,22 @@ define(['jquery', 'underscore', 'backbone',
   Module.View = Backbone.View.extend({
     initialize: function() {
       this.model = new Module.Model({
-        mode: this.options.mode
+        mode: this.options.mode || 'traditional',
+        player1: this.options.player1 || 'human'
       });
       this.loadGameEngine();
-      this.loadPlayers(this.options.player1);
+      this.loadPlayers();
+    },
+
+    game: function() {
+      return {
+        mode: this.model.get('mode'),
+        player1: this.model.get('player1')
+      };
     },
 
     loadGameEngine: function() {
-      var mode = this.options.mode || 'traditional';
-      this.model.set({ mode: mode });
+      var mode = this.model.mode();
 
       if (mode === 'lizard-spock') {
         this.gameEngine = new LizardSpock.View();
@@ -45,7 +52,9 @@ define(['jquery', 'underscore', 'backbone',
       }
     },
 
-    loadPlayers: function(player) {
+    loadPlayers: function() {
+      var player = this.model.get('player1');
+
       if (player === 'cpu') {
         this.player1 = new CPU.View();
       } else {

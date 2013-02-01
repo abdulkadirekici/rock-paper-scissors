@@ -1,6 +1,4 @@
-define(['jquery', 'underscore', 'backbone'
-], function($, _, Backbone
-) {
+define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
   var Module = {};
 
   Module.Model = Backbone.Model.extend({
@@ -20,9 +18,6 @@ define(['jquery', 'underscore', 'backbone'
     name: function() {
       return this.get('name');
     }
-  });
-
-  Module.View = Backbone.View.extend({
   });
 
   return Module;

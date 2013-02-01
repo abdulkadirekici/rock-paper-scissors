@@ -1,6 +1,4 @@
-define(['jquery', 'underscore', 'backbone'
-], function($, _, Backbone
-) {
+define(['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
   var Module = {};
 
   Module.Model = Backbone.Model.extend({
@@ -49,7 +47,7 @@ define(['jquery', 'underscore', 'backbone'
       } else if (chosenWeapon2.beats(chosenWeapon1)) {
         return weapons.reverse();
       } else {
-        throw 'Faulty rules: unable to determine who beats who between: ' + chosenWeapon1.name()  +' and '+ chosenWeapon2.name();
+        throw 'Faulty rules: unable to determine who beats who between: ' + chosenWeapon1.name() +' and '+ chosenWeapon2.name();
       }
     },
 
