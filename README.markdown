@@ -22,7 +22,7 @@ Point the browser to /index.html
 ## Running the test specs
 Point the browser to the /spec/index.html
 
-## TODO's
+## TODOs
  - Highlight the winner
  - Make the weapons be displayed under each player box
  - Clean screen state after each game / offer a "New game" button
